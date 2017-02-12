@@ -60,7 +60,7 @@ Available options:
 Returns a `Rapa::Responses::ListItemsResponse`.
 
 ```ruby
-response = client.list_items_response(
+response = client.list_items(
   asins: ["...", "..."],
   domain: "co.jp",
   response_groups: ["...", "..."],

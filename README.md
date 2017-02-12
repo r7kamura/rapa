@@ -49,18 +49,20 @@ client = Rapa::Client.new(
 )
 ```
 
-### Rapa::Client#get_item
+### Rapa::Client#list_items
 
 Available options:
 
-- `:asin`
+- `:asins`
 - `:domain`
+- `:response_groups`
 
-Returns a `Rapa::Responses::GetItemResponse`.
+Returns a `Rapa::Responses::ListItemsResponse`.
 
 ```ruby
-response = client.get_item_response(
-  asin: "...",
+response = client.list_items_response(
+  asins: ["...", "..."],
   domain: "co.jp",
+  response_groups: ["...", "..."],
 )
 ```

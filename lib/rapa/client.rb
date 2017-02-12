@@ -20,14 +20,14 @@ module Rapa
       end
     end
 
-    # @param asin [String]
+    # @param asins [Array<String>]
     # @param domain [String]
-    # @return [Rapa::Responses::GetItemResponse]
-    def get_item(asin:, domain:)
-      query = ::Rapa::Queries::GetItemQuery.new(asin: asin)
+    # @return [Rapa::Responses::ListItemsResponse]
+    def list_items(asin:, domain:)
+      query = ::Rapa::Queries::ListItemsQuery.new(asins: asins)
       url = ::Rapa::Url.new(domain: domain)
       faraday_response = connection.get(url, query)
-      ::Rapa::Responses::GetItemResponse.new(faraday_response)
+      ::Rapa::Responses::ListItemsResponse.new(faraday_response)
     end
 
     private

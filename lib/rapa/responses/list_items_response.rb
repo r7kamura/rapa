@@ -1,6 +1,6 @@
 module Rapa
   module Responses
-    class GetItemResponse < BaseResponse
+    class ListItemsResponse < BaseResponse
     end
   end
 end

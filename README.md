@@ -27,3 +27,33 @@ Or install it yourself as:
 ```bash
 gem install rapa
 ```
+
+## Usage
+
+### Rapa::Client.new
+
+Available options:
+
+- `:access_key_id`
+- `:associate_tag`
+- `:secret_access_key`
+
+Returns a `Rapa::Client`.
+
+```ruby
+require "rapa"
+client = Rapa::Client.new(
+  access_key_id: "...",
+  associate_tag: "...",
+  secret_access_key: "...",
+)
+```
+
+### Rapa::Client#get_item
+
+Available options:
+
+- `:asin`
+- `:country_code`
+
+Returns a `Rapa::Responses::GetItemResponse`.

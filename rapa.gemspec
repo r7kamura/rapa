@@ -6,7 +6,7 @@ require 'rapa/version'
 Gem::Specification.new do |spec|
   spec.name          = "rapa"
   spec.version       = Rapa::VERSION
-  spec.authors       = ["r7kamura"]
+  spec.authors       = ["Ryo Nakamura"]
   spec.email         = ["r7kamura@gmail.com"]
 
   spec.summary       = %q{TODO: Write a short summary, because Rubygems requires one.}

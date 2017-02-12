@@ -13,6 +13,8 @@ Gem::Specification.new do |spec|
 
   spec.require_paths = ["lib"]
 
+  spec.required_ruby_version = ">= 2.2.2"
+
   spec.add_dependency "faraday"
   spec.add_dependency "faraday_middleware"
   spec.add_dependency "multi_xml"

@@ -57,3 +57,10 @@ Available options:
 - `:country_code`
 
 Returns a `Rapa::Responses::GetItemResponse`.
+
+```ruby
+response = client.get_item_response(
+  asin: "...",
+  county_code: "jp",
+)
+```

@@ -54,13 +54,13 @@ client = Rapa::Client.new(
 Available options:
 
 - `:asin`
-- `:country_code`
+- `:domain`
 
 Returns a `Rapa::Responses::GetItemResponse`.
 
 ```ruby
 response = client.get_item_response(
   asin: "...",
-  county_code: "jp",
+  domain: "co.jp",
 )
 ```

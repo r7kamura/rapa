@@ -21,11 +21,11 @@ module Rapa
     end
 
     # @param asin [String]
-    # @param country_code [String]
+    # @param domain [String]
     # @return [Rapa::Responses::GetItemResponse]
-    def get_item(asin:, country_code:)
+    def get_item(asin:, domain:)
       query = ::Rapa::Queries::GetItemQuery.new(asin: asin)
-      url = ::Rapa::Url.new(country_code: country_code)
+      url = ::Rapa::Url.new(domain: domain)
       faraday_response = connection.get(url, query)
       ::Rapa::Responses::GetItemResponse.new(faraday_response)
     end

@@ -24,6 +24,10 @@ module Rapa
     # @param country_code [String]
     # @return [Rapa::Responses::GetItemResponse]
     def get_item(asin:, country_code:)
+      query = ::Rapa::Queries::GetItemQuery.new(asin: asin)
+      url = ::Rapa::Url.new(country_code: country_code)
+      faraday_response = connection.get(url, query)
+      ::Rapa::Responses::GetItemResponse.new(faraday_response)
     end
 
     private

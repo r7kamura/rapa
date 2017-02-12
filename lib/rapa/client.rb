@@ -1,5 +1,6 @@
 require "faraday"
 require "faraday_middleware"
+require "uri"
 
 module Rapa
   class Client
@@ -17,16 +18,31 @@ module Rapa
       @connection ||= ::Faraday::Connection.new do |connection|
         connection.adapter :net_http
         connection.response :xml
+        connection.options.params_encoder = ::Rapa::Encoder.new
       end
     end
 
     # @param asins [Array<String>]
     # @param domain [String]
     # @return [Rapa::Responses::ListItemsResponse]
-    def list_items(asin:, domain:)
-      query = ::Rapa::Queries::ListItemsQuery.new(asins: asins)
+    def list_items(asins:, domain:)
+      query = ::Rapa::Queries::ListItemsQuery.new(
+        {
+          access_key_id: access_key_id,
+          associate_tag: associate_tag,
+        }.merge(asins: asins),
+      )
       url = ::Rapa::Url.new(domain: domain)
-      faraday_response = connection.get(url, query)
+      uri = ::URI.parse(url.to_s)
+      query_string = query.to_s
+      signature = ::Rapa::Signer.new(
+        host: uri.host,
+        http_method: "GET",
+        key: secret_access_key,
+        path: uri.path,
+        query_string: query_string,
+      ).sign
+      faraday_response = connection.get(uri, query.to_hash.merge(Signature: signature))
       ::Rapa::Responses::ListItemsResponse.new(faraday_response)
     end
 

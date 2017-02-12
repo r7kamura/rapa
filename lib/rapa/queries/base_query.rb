@@ -1,3 +1,5 @@
+require "cgi"
+
 module Rapa
   module Queries
     class BaseQuery
@@ -32,7 +34,17 @@ module Rapa
           unless value.nil?
             result[property_name.to_s] = value
           end
-        end
+        end.sort.to_h
+      end
+
+      # @return [String]
+      def to_s
+        to_hash.map do |key, value|
+          [
+            key,
+            ::CGI.escape(value),
+          ].join("=")
+        end.join("&")
       end
 
       private

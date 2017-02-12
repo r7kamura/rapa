@@ -20,6 +20,6 @@ bundle
 
 Or install it yourself as:
 
-```ruby
+```bash
 gem install rapa
 ```

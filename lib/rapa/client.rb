@@ -19,5 +19,25 @@ module Rapa
         connection.response :xml
       end
     end
+
+    private
+
+    # @private
+    # @return [String]
+    def access_key_id
+      @access_key_id
+    end
+
+    # @private
+    # @return [String]
+    def associate_tag
+      @associate_tag
+    end
+
+    # @private
+    # @return [String]
+    def secret_access_key
+      @secret_access_key
+    end
   end
 end

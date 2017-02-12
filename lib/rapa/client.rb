@@ -20,6 +20,12 @@ module Rapa
       end
     end
 
+    # @param asin [String]
+    # @param country_code [String]
+    # @return [Rapa::Responses::GetItemResponse]
+    def get_item(asin:, country_code:)
+    end
+
     private
 
     # @private

@@ -1,2 +1,6 @@
 require "rapa/client"
+require "rapa/queries/base_query"
+require "rapa/queries/get_item_query"
+require "rapa/responses/base_response"
+require "rapa/responses/get_item_response"
 require "rapa/version"

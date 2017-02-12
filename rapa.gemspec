@@ -7,8 +7,8 @@ Gem::Specification.new do |spec|
   spec.version       = Rapa::VERSION
   spec.authors       = ["Ryo Nakamura"]
   spec.email         = ["r7kamura@gmail.com"]
-  spec.summary       = %q{TODO: Write a short summary, because Rubygems requires one.}
-  spec.homepage      = "TODO: Put your gem's website or public repo URL here."
+  spec.summary       = "An API client library for Amazon Product Advertising API, written in Ruby."
+  spec.homepage      = "https://github.com/r7kamura/rapa"
   spec.license       = "MIT"
 
   spec.require_paths = ["lib"]

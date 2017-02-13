@@ -66,3 +66,20 @@ response = client.list_items(
   response_groups: ["...", "..."],
 )
 ```
+
+### Rapa::Resources::ItemResource
+
+Available methods:
+
+- `#asin`
+- `#authors`
+- `#creator_name`
+- `#creator_role`
+- `#manufacturer`
+- `#product_group`
+- `#title`
+- `#url_add_to_wishlist`
+- `#url_all_customer_reviews`
+- `#url_all_offers`
+- `#url_details_page`
+- `#url_tell_a_friend`

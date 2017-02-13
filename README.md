@@ -57,6 +57,21 @@ Available options:
 - `:domain`
 - `:response_groups`
 
+Available domains:
+
+- `"ca"`
+- `"cn"`
+- `"co.jp"`
+- `"co.uk"`
+- `"com"`
+- `"com.br"`
+- `"com.mx"`
+- `"de"`
+- `"es"`
+- `"fr"`
+- `"in"`
+- `"it"`
+
 Returns a `Rapa::Responses::ListItemsResponse`.
 
 ```ruby

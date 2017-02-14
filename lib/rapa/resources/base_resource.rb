@@ -6,8 +6,6 @@ module Rapa
         @source = source
       end
 
-      private
-
       # @return [Hash]
       def source
         @source

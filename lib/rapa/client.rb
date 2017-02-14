@@ -22,17 +22,16 @@ module Rapa
       end
     end
 
-    # @param asins [Array<String>]
-    # @param domain [String]
+    # @param options [Hash]
     # @return [Rapa::Responses::ListItemsResponse]
-    def list_items(asins:, domain:)
+    def list_items(options)
       query = ::Rapa::Queries::ListItemsQuery.new(
         {
           access_key_id: access_key_id,
           associate_tag: associate_tag,
-        }.merge(asins: asins),
+        }.merge(options),
       )
-      url = ::Rapa::Url.new(domain: domain)
+      url = ::Rapa::Url.new(domain: options[:domain])
       uri = ::URI.parse(url.to_s)
       query_string = query.to_s
       signature = ::Rapa::Signer.new(

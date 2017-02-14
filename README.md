@@ -1,5 +1,9 @@
 # Rapa
 
+[![CircleCI](https://img.shields.io/circleci/project/github/r7kamura/rapa.svg)](https://circleci.com/gh/r7kamura/rapa)
+[![Gem Version](https://badge.fury.io/rb/rapa.svg)](https://rubygems.org/gems/rapa)
+[![Documentation](http://img.shields.io/badge/docs-rdoc.info-blue.svg)](http://www.rubydoc.info/github/r7kamura/rapa)
+
 An API client library for Amazon Product Advertising API, written in Ruby.
 
 See https://affiliate-program.amazon.com/gp/advertising/api/detail/main.html for more details about Amazon Product Advertising API.

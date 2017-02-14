@@ -87,6 +87,7 @@ response = client.list_items(
 Available methods:
 
 - `#adult_product?`
+- `#alternate_versions`
 - `#asin`
 - `#authors`
 - `#binding`
@@ -94,7 +95,9 @@ Available methods:
 - `#creator_name`
 - `#creator_role`
 - `#ean`
-- `#has_customer_review?`
+- `#episode_sequence`
+- `#genre`
+- `#has_customer_reviews?`
 - `#image_hi_res`
 - `#image_large`
 - `#image_medium`
@@ -107,7 +110,7 @@ Available methods:
 - `#item_length`
 - `#item_width`
 - `#label`
-- `#language_name`
+- `#languages`
 - `#manufacturer`
 - `#number_of_pages`
 - `#package_height`
@@ -118,8 +121,16 @@ Available methods:
 - `#product_type_name`
 - `#publication_date`
 - `#publisher`
+- `#related_item_count`
+- `#related_item_page`
+- `#related_item_page_count`
+- `#related_items`
+- `#relationship`
+- `#relationship_type`
 - `#release_date`
+- `#running_time`
 - `#sales_rank`
+- `#season_sequence`
 - `#similar_products`
 - `#studio`
 - `#title`

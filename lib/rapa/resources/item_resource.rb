@@ -10,6 +10,15 @@ module Rapa
         end
       end
 
+      # @return [Array<Rapa::AlternateVersion>, nil]
+      def alternate_versions
+        if alternate_version_sources = source.dig("AlternateVersions", "AlternateVersion")
+          ::Array.wrap(alternate_version_sources).map do |alternate_version_source|
+            ::Rapa::AlternateVersion.new(alternate_version_source)
+          end
+        end
+      end
+
       # @return [String]
       def asin
         source["ASIN"]
@@ -47,8 +56,20 @@ module Rapa
         source.dig("ItemAttributes", "EAN")
       end
 
+      # @return [Integer, nil]
+      def episode_sequence
+        if value = source.dig("ItemAttributes", "EpisodeSequence")
+          value.to_i
+        end
+      end
+
+      # @return [String, nil]
+      def genre
+        source.dig("ItemAttributes", "Genre")
+      end
+
       # @return [Boolean]
-      def has_customer_review?
+      def has_customer_reviews?
         source.dig("CustomerReviews", "HasReviews") == "true"
       end
 
@@ -118,9 +139,13 @@ module Rapa
         source.dig("ItemAttributes", "Label")
       end
 
-      # @return [String, nil]
-      def language_name
-        source.dig("ItemAttributes", "Languages", "Language", "Name")
+      # @return [Array<Rapa::Language>, nil]
+      def languages
+        if language_sources = source.dig("ItemAttributes", "Languages", "Language")
+          language_sources.map do |language_source|
+            ::Rapa::Language.new(language_source)
+          end
+        end
       end
 
       # @return [String, nil]
@@ -185,6 +210,50 @@ module Rapa
         source.dig("ItemAttributes", "Publisher")
       end
 
+      # @return [Integer, nil]
+      def related_item_count
+        if value = source.dig("RelatedItems", "RelatedItemCount")
+          value.to_i
+        end
+      end
+
+      # @return [Integer, nil]
+      def related_item_page
+        if value = source.dig("RelatedItems", "RelatedItemPage")
+          value.to_i
+        end
+      end
+
+      # @return [Integer, nil]
+      def related_item_page_count
+        if value = source.dig("RelatedItems", "RelatedItemPageCount")
+          value.to_i
+        end
+      end
+
+      # @return [Array<Rapa::Resources::ItemResource>, nil]
+      def related_items
+        if source_or_sources = source.dig("RelatedItems", "RelatedItem")
+          if source_or_sources.is_a?(::Array)
+            source_or_sources
+          else
+            [source_or_sources]
+          end.map do |related_item_source|
+            ::Rapa::Resources::ItemResource.new(related_item_source["Item"])
+          end
+        end
+      end
+
+      # @return [String, nil]
+      def relationship
+        source.dig("RelatedItems", "Relationship")
+      end
+
+      # @return [String, nil]
+      def relationship_type
+        source.dig("RelatedItems", "RelationshipType")
+      end
+
       # @return [Date, nil]
       def release_date
         if value = source.dig("ItemAttributes", "ReleaseDate")
@@ -192,9 +261,23 @@ module Rapa
         end
       end
 
+      # @return [Rapa::Quantity, nil]
+      def running_time
+        if value = source.dig("ItemAttributes", "RunningTime")
+          ::Rapa::Quantity.new(value)
+        end
+      end
+
       # @return [Integer, nil]
       def sales_rank
         source["SalesRank"]
+      end
+
+      # @return [Integer, nil]
+      def season_sequence
+        if value = source.dig("ItemAttributes", "SeasonSequence")
+          value.to_i
+        end
       end
 
       # @return [Array<Rapa::SimilarProduct>, nil]

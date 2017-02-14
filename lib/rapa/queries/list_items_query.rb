@@ -11,6 +11,8 @@ module Rapa
       property :AWSAccessKeyId
       property :ItemId
       property :Operation
+      property :RelatedItemPage
+      property :RelationshipType
       property :ResponseGroup
       property :Service
       property :Timestamp
@@ -34,6 +36,16 @@ module Rapa
       # @return [String]
       def Operation
         OPERATION
+      end
+
+      # @return [Integer, nil]
+      def RelatedItemPage
+        options[:related_item_page]
+      end
+
+      # @return [String, nil]
+      def RelationshipType
+        options[:relationship_type]
       end
 
       # @return [String, nil]

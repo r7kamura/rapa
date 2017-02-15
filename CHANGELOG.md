@@ -1,4 +1,4 @@
-## Unreleased
+## 0.2.0
 
 - Add `Rapa::Client#search_items`
 

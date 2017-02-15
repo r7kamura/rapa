@@ -22,23 +22,54 @@ module Rapa
       end
     end
 
-    # @param options [Hash]
+    # @param asins [Array<String>]
+    # @param domain [String]
+    # @param related_item_page [Integer, nil]
+    # @param relationship_type [String, nil]
+    # @param response_groups [Array<String>, nil]
     # @return [Rapa::Responses::ListItemsResponse]
-    def list_items(**options)
+    def list_items(
+      asins:,
+      domain:,
+      related_item_page: nil,
+      relationship_type: nil,
+      response_groups: nil
+    )
       send_request(
+        asins: asins,
+        domain: domain,
         query_class: ::Rapa::Queries::ListItemsQuery,
+        related_item_page: related_item_page,
+        relationship_type: relationship_type,
         response_class: ::Rapa::Responses::ListItemsResponse,
-        **options,
+        response_groups: response_groups,
       )
     end
 
-    # @param options [Hash]
+    # @param domain [String]
+    # @param keywords [Array<String>]
+    # @param related_item_page [Integer, nil]
+    # @param relationship_type [String, nil]
+    # @param response_groups [Array<String>, nil]
+    # @param search_index [String]
     # @return [Rapa::Responses::SearchItemsResponse]
-    def search_items(options)
+    def search_items(
+      domain:,
+      keywords:,
+      related_item_page: nil,
+      relationship_type: nil,
+      response_groups: nil,
+      search_index:
+    )
       send_request(
+        domain: domain,
+        keywords: keywords,
         query_class: ::Rapa::Queries::SearchItemsQuery,
+        related_item_page: related_item_page,
+        relationship_type: relationship_type,
         response_class: ::Rapa::Responses::SearchItemsResponse,
-        **options,
+        response_groups: response_groups,
+        search_index: search_index,
       )
     end
 

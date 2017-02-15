@@ -59,6 +59,8 @@ Available options:
 
 - `:asins`
 - `:domain`
+- `:related_item_page`
+- `:relationship_type`
 - `:response_groups`
 
 Available domains:
@@ -92,7 +94,10 @@ Available options:
 
 - `:domain`
 - `:keywords`
+- `:related_item_page`
+- `:relationship_type`
 - `:response_groups`
+- `:search_index`
 
 Returns a `Rapa::Responses::SearchItemsResponse`.
 

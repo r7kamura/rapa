@@ -98,6 +98,8 @@ response = client.search_items(
 
 Available methods:
 
+- `#error`
+- `#has_error?`
 - `#has_valid_request?`
 - `#total_pages`
 - `#total_results`

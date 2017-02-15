@@ -1,6 +1,18 @@
 module Rapa
   module Responses
     class SearchItemsResponse < BaseResponse
+      # @return [Rapa::Error]
+      def error
+        if value = body.dig("ItemSearchResponse", "Items", "Request", "Errors", "Error")
+          ::Rapa::Error.new(value)
+        end
+      end
+
+      # @return [Boolean]
+      def has_error?
+        !error.nil?
+      end
+
       # @return [Boolean]
       def has_valid_request?
         body.dig("ItemSearchResponse", "Items", "Request", "IsValid") == "True"

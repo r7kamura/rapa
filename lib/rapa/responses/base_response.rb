@@ -18,12 +18,6 @@ module Rapa
         resources.each(&block)
       end
 
-      # @todo
-      # @return [Boolean]
-      def has_error?
-        raise "TODO"
-      end
-
       # @return [Faraday::Utils::Headers]
       def headers
         faraday_response.headers

@@ -1,3 +1,7 @@
+## Unreleased
+
+- Add `Rapa::Responses::SearchItemsResponse#has_valid_request?`
+
 ## 0.2.1
 
 - Add `Rapa::Responses::SearchItemsResponse#total_pages`

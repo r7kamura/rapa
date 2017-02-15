@@ -1,6 +1,11 @@
 module Rapa
   module Responses
     class SearchItemsResponse < BaseResponse
+      # @return [Boolean]
+      def has_valid_request?
+        body.dig("ItemSearchResponse", "Items", "Request", "IsValid") == "True"
+      end
+
       # @return [Integer, nil]
       def total_pages
         if value = body.dig("ItemSearchResponse", "Items", "TotalPages")

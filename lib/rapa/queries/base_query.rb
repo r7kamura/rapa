@@ -1,8 +1,12 @@
 require "cgi"
+require "time"
 
 module Rapa
   module Queries
     class BaseQuery
+      SERVICE = "AWSECommerceService"
+      VERSION = "2013-08-01"
+
       class << self
         attr_writer :property_names
 
@@ -22,9 +26,61 @@ module Rapa
         end
       end
 
+      property :AssociateTag
+      property :AWSAccessKeyId
+      property :Operation
+      property :RelatedItemPage
+      property :RelationshipType
+      property :ResponseGroup
+      property :Service
+      property :Timestamp
+      property :Version
+
       # @param options [Hash]
       def initialize(options = {})
         @options = options
+      end
+
+      # @return [String]
+      def AssociateTag
+        options[:associate_tag]
+      end
+
+      # @return [String]
+      def AWSAccessKeyId
+        options[:access_key_id]
+      end
+
+      # @return [String]
+      def Operation
+        raise ::NotImplementedError
+      end
+
+      # @return [Integer, nil]
+      def RelatedItemPage
+        options[:related_item_page]
+      end
+
+      # @return [String, nil]
+      def RelationshipType
+        options[:relationship_type]
+      end
+
+      # @return [String, nil]
+      def ResponseGroup
+        if options[:response_groups]
+          options[:response_groups].join(",")
+        end
+      end
+
+      # @return [String]
+      def Service
+        SERVICE
+      end
+
+      # @return [String]
+      def Timestamp
+        ::Time.now.utc.iso8601
       end
 
       # @return [Hash]
@@ -45,6 +101,11 @@ module Rapa
             ::CGI.escape(value),
           ].join("=")
         end.join("&")
+      end
+
+      # @return [String]
+      def Version
+        VERSION
       end
 
       private

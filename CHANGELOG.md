@@ -1,3 +1,7 @@
+## Unreleased
+
+- Add `Rapa::Client#search_items`
+
 ## 0.1.0
 
 - Add `Rapa::Resources::ItemResource`

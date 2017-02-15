@@ -80,9 +80,27 @@ Returns a `Rapa::Responses::ListItemsResponse`.
 
 ```ruby
 response = client.list_items(
-  asins: ["...", "..."],
+  asins: ["..."],
   domain: "co.jp",
-  response_groups: ["...", "..."],
+  response_groups: ["..."],
+)
+```
+
+### Rapa::Client#search_items
+
+Available options:
+
+- `:domain`
+- `:keywords`
+- `:response_groups`
+
+Returns a `Rapa::Responses::SearchItemsResponse`.
+
+```ruby
+response = client.search_items(
+  domain: "co.jp",
+  keywords: ["..."],
+  response_groups: ["..."],
 )
 ```
 

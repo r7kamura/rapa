@@ -83,7 +83,7 @@ Returns a `Rapa::Responses::ListItemsResponse`.
 ```ruby
 response = client.list_items(
   asins: ["..."],
-  domain: "co.jp",
+  domain: "...",
   response_groups: ["..."],
 )
 ```
@@ -103,7 +103,7 @@ Returns a `Rapa::Responses::SearchItemsResponse`.
 
 ```ruby
 response = client.search_items(
-  domain: "co.jp",
+  domain: "...",
   keywords: ["..."],
   response_groups: ["..."],
 )

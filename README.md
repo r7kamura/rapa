@@ -109,6 +109,13 @@ response = client.search_items(
 )
 ```
 
+### Rapa::Responses::SearchItemsResponse
+
+Available methods:
+
+- `#total_pages`
+- `#total_results`
+
 ### Rapa::Resources::ItemResource
 
 Available methods:

@@ -1,5 +1,7 @@
 ## Unreleased
 
+- Add `Rapa::Responses::SearchItemsResponse#total_pages`
+- Add `Rapa::Responses::SearchItemsResponse#total_results`
 - Fix response parser on `Rapa::Client#search_items`
 
 ## 0.2.0

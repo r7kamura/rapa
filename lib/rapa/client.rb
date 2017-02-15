@@ -22,44 +22,24 @@ module Rapa
       end
     end
 
-    # @param domain [String]
     # @param options [Hash]
     # @return [Rapa::Responses::ListItemsResponse]
-    def list_items(domain:, **options)
-      query_options = common_query_options.merge(options)
-      query = ::Rapa::Queries::ListItemsQuery.new(query_options)
-      url = ::Rapa::Url.new(domain: domain)
-      uri = ::URI.parse(url.to_s)
-      query_string = query.to_s
-      signature = ::Rapa::Signer.new(
-        host: uri.host,
-        http_method: "GET",
-        key: secret_access_key,
-        path: uri.path,
-        query_string: query_string,
-      ).sign
-      faraday_response = connection.get(uri, query.to_hash.merge(Signature: signature))
-      ::Rapa::Responses::ListItemsResponse.new(faraday_response)
+    def list_items(**options)
+      send_request(
+        query_class: ::Rapa::Queries::ListItemsQuery,
+        response_class: ::Rapa::Responses::ListItemsResponse,
+        **options,
+      )
     end
 
-    # @param domain [String]
     # @param options [Hash]
     # @return [Rapa::Responses::SearchItemsResponse]
-    def search_items(domain:, **options)
-      query_options = common_query_options.merge(options)
-      query = ::Rapa::Queries::SearchItemsQuery.new(query_options)
-      url = ::Rapa::Url.new(domain: domain)
-      uri = ::URI.parse(url.to_s)
-      query_string = query.to_s
-      signature = ::Rapa::Signer.new(
-        host: uri.host,
-        http_method: "GET",
-        key: secret_access_key,
-        path: uri.path,
-        query_string: query_string,
-      ).sign
-      faraday_response = connection.get(uri, query.to_hash.merge(Signature: signature))
-      ::Rapa::Responses::SearchItemsResponse.new(faraday_response)
+    def search_items(options)
+      send_request(
+        query_class: ::Rapa::Queries::SearchItemsQuery,
+        response_class: ::Rapa::Responses::SearchItemsResponse,
+        **options,
+      )
     end
 
     private
@@ -89,6 +69,28 @@ module Rapa
     # @return [String]
     def secret_access_key
       @secret_access_key
+    end
+
+    # @private
+    # @param domain [String]
+    # @param query_class [Class]
+    # @param response_class [Class]
+    # @return [Rapa::Responses::BaseResponse]
+    def send_request(domain:, query_class:, response_class:, **options)
+      query_options = common_query_options.merge(options)
+      query = query_class.new(query_options)
+      url = ::Rapa::Url.new(domain: domain)
+      uri = ::URI.parse(url.to_s)
+      query_string = query.to_s
+      signature = ::Rapa::Signer.new(
+        host: uri.host,
+        http_method: "GET",
+        key: secret_access_key,
+        path: uri.path,
+        query_string: query_string,
+      ).sign
+      faraday_response = connection.get(uri, query.to_hash.merge(Signature: signature))
+      response_class.new(faraday_response)
     end
   end
 end

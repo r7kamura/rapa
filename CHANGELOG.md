@@ -1,3 +1,7 @@
+## Unreleased
+
+- Fix response parser on `Rapa::Client#search_items`
+
 ## 0.2.0
 
 - Add `Rapa::Client#search_items`

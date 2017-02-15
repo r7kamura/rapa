@@ -55,11 +55,11 @@ module Rapa
       end
 
       # @private
-      # @return [Array<Hash>, Hash]
       def source_or_sources
-        body["ItemLookupResponse"]["Items"]["Item"]
+        raise ::NotImplementedError
       end
 
+      # @private
       # @return [Array<Hash>]
       def sources
         case source_or_sources

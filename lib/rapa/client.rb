@@ -51,7 +51,7 @@ module Rapa
     # @param related_item_page [Integer, nil]
     # @param relationship_type [String, nil]
     # @param response_groups [Array<String>, nil]
-    # @param search_index [String]
+    # @param search_index [String, nil]
     # @return [Rapa::Responses::SearchItemsResponse]
     def search_items(
       domain:,
@@ -59,7 +59,7 @@ module Rapa
       related_item_page: nil,
       relationship_type: nil,
       response_groups: nil,
-      search_index:
+      search_index: nil
     )
       send_request(
         domain: domain,

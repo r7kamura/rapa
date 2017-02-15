@@ -1,6 +1,7 @@
 module Rapa
   module Queries
     class SearchItemsQuery < BaseQuery
+      SEARCH_INDEX_DEFAULT = "All"
       OPERATION = "ItemSearch"
 
       property :Keywords
@@ -18,7 +19,7 @@ module Rapa
 
       # @return [String]
       def SearchIndex
-        options[:search_index]
+        options[:search_index] || SEARCH_INDEX_DEFAULT
       end
     end
   end

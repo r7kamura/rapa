@@ -3,6 +3,7 @@
 - Add `Rapa::Responses::SearchItemsResponse#error`
 - Add `Rapa::Responses::SearchItemsResponse#has_error?`
 - Add `Rapa::Responses::SearchItemsResponse#has_valid_request?`
+- Use `"All"` as default SearchIndex parameter
 
 ## 0.2.1
 

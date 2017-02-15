@@ -220,3 +220,5 @@ Available SearchIndex examples:
 - `"VideoDownload"`
 - `"VideoGames"`
 - `"Watches"`
+
+See http://docs.aws.amazon.com/AWSECommerceService/latest/DG/localevalues.html for more details.

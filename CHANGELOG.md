@@ -1,4 +1,4 @@
-## Unreleased
+## 0.2.1
 
 - Add `Rapa::Responses::SearchItemsResponse#total_pages`
 - Add `Rapa::Responses::SearchItemsResponse#total_results`

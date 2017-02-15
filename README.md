@@ -63,21 +63,6 @@ Available options:
 - `:relationship_type`
 - `:response_groups`
 
-Available domains:
-
-- `"ca"`
-- `"cn"`
-- `"co.jp"`
-- `"co.uk"`
-- `"com"`
-- `"com.br"`
-- `"com.mx"`
-- `"de"`
-- `"es"`
-- `"fr"`
-- `"in"`
-- `"it"`
-
 Returns a `Rapa::Responses::ListItemsResponse`.
 
 ```ruby
@@ -174,3 +159,64 @@ Available methods:
 - `#url_customer_reviews_iframe`
 - `#url_details_page`
 - `#url_tell_a_friend`
+
+## Hints
+
+### Domain
+
+Available domain examples:
+
+- `"ca"`
+- `"cn"`
+- `"co.jp"`
+- `"co.uk"`
+- `"com"`
+- `"com.br"`
+- `"com.mx"`
+- `"de"`
+- `"es"`
+- `"fr"`
+- `"in"`
+- `"it"`
+
+### SearchIndex
+
+Available SearchIndex examples:
+
+- `"All"`
+- `"Apparel"`
+- `"Appliances"`
+- `"Automotive"`
+- `"Baby"`
+- `"Beauty"`
+- `"Blended"`
+- `"Books"`
+- `"Classical"`
+- `"CreditCards"`
+- `"DVD"`
+- `"Electronics"`
+- `"ForeignBooks"`
+- `"GiftCards"`
+- `"Grocery"`
+- `"HealthPersonalCare"`
+- `"Hobbies"`
+- `"HomeImprovement"`
+- `"Industrial"`
+- `"Jewelry"`
+- `"KindleStore"`
+- `"Kitchen"`
+- `"Marketplace"`
+- `"MP3Downloads"`
+- `"Music"`
+- `"MusicalInstruments"`
+- `"OfficeProducts"`
+- `"PCHardware"`
+- `"PetSupplies"`
+- `"Shoes"`
+- `"Software"`
+- `"SportingGoods"`
+- `"Toys"`
+- `"Video"`
+- `"VideoDownload"`
+- `"VideoGames"`
+- `"Watches"`

@@ -4,6 +4,7 @@
 - Add `Rapa::Responses::SearchItemsResponse#has_error?`
 - Add `Rapa::Responses::SearchItemsResponse#has_valid_request?`
 - Use `"All"` as default SearchIndex parameter
+- Fix bug that no files included in gem package
 
 ## 0.2.1
 

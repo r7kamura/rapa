@@ -1,4 +1,4 @@
-## Unreleased
+## 0.3.1
 
 - Fix escape bug of spaces in URL query
 

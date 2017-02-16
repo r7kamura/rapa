@@ -1,4 +1,4 @@
-## Unreleased
+## 0.3.0
 
 - Add `Rapa::Responses::SearchItemsResponse#error`
 - Add `Rapa::Responses::SearchItemsResponse#has_error?`

@@ -1,4 +1,4 @@
-require "cgi"
+require "erb"
 require "time"
 
 module Rapa
@@ -88,7 +88,7 @@ module Rapa
         self.class.property_names.each_with_object({}) do |property_name, result|
           value = send(property_name)
           unless value.nil?
-            result[property_name.to_s] = ::CGI.escape(value).gsub(" ", "%20")
+            result[property_name.to_s] = ::ERB::Util.url_encode(value)
           end
         end.sort.to_h
       end

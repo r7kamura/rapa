@@ -1,3 +1,7 @@
+## Unreleased
+
+- Fix escape bug of spaces in URL query
+
 ## 0.3.0
 
 - Add `Rapa::Responses::SearchItemsResponse#error`

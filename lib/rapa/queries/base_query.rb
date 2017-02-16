@@ -88,7 +88,7 @@ module Rapa
         self.class.property_names.each_with_object({}) do |property_name, result|
           value = send(property_name)
           unless value.nil?
-            result[property_name.to_s] = value
+            result[property_name.to_s] = ::CGI.escape(value).gsub(" ", "%20")
           end
         end.sort.to_h
       end
@@ -98,7 +98,7 @@ module Rapa
         to_hash.map do |key, value|
           [
             key,
-            ::CGI.escape(value),
+            value,
           ].join("=")
         end.join("&")
       end

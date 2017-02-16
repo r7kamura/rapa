@@ -8,7 +8,7 @@ module Rapa
       parameters.map do |key, value|
         [
           key,
-          ::CGI.escape(value),
+          value,
         ].join("=")
       end.join("&")
     end

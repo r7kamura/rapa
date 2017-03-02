@@ -1,3 +1,7 @@
+## Unreleased
+
+- Fix bug on no image set case
+
 ## 0.3.2
 
 - Fix bug on multi image sets item

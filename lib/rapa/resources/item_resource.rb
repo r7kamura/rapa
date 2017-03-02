@@ -347,7 +347,9 @@ module Rapa
         else
           image_set = source.dig("ImageSets", "ImageSet")
           image_set = image_set.first if image_set.is_a?(::Array)
-          image_set[key]
+          if image_set
+            image_set[key]
+          end
         end
       end
 

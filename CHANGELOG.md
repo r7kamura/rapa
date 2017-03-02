@@ -1,4 +1,4 @@
-## Unreleased
+## 0.3.2
 
 - Fix bug on multi image sets item
 

@@ -1,4 +1,4 @@
-## Unreleased
+## 0.3.3
 
 - Fix bug on no image set case
 

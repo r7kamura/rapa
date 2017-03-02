@@ -1,3 +1,7 @@
+## Unreleased
+
+- Fix bug on multi image sets item
+
 ## 0.3.1
 
 - Fix escape bug of spaces in URL query

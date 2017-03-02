@@ -334,8 +334,20 @@ module Rapa
       # @param key [String]
       # @return [Rapa::Image, nil]
       def find_image(key)
-        if image_source = (source[key] || source.dig("ImageSets", "ImageSet", key))
+        if image_source = find_image_source(key)
           ::Rapa::Image.new(image_source)
+        end
+      end
+
+      # @param key [String]
+      # @return [Hash, nil]
+      def find_image_source(key)
+        if source[key]
+          source[key]
+        else
+          image_set = source.dig("ImageSets", "ImageSet")
+          image_set = image_set.first if image_set.is_a?(::Array)
+          image_set[key]
         end
       end
 

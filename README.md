@@ -57,17 +57,19 @@ client = Rapa::Client.new(
 
 Available options:
 
-- `:asins`
+- `:id_type`
+- `:item_ids`
 - `:domain`
 - `:related_item_page`
 - `:relationship_type`
 - `:response_groups`
+- `:search_index`
 
 Returns a `Rapa::Responses::ListItemsResponse`.
 
 ```ruby
 response = client.list_items(
-  asins: ["..."],
+  item_ids: ["..."],
   domain: "...",
   response_groups: ["..."],
 )
@@ -181,6 +183,17 @@ Available domain examples:
 - `"fr"`
 - `"in"`
 - `"it"`
+
+### IdType
+
+Available values:
+
+- `"ASIN"`
+- `"EAN"`
+- `"ISBN"`
+- `"JAN"`
+- `"SKU"`
+- `"UPC"`
 
 ### SearchIndex
 

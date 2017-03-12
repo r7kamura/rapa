@@ -22,27 +22,32 @@ module Rapa
       end
     end
 
-    # @param asins [Array<String>]
+    # @param item_ids [Array<String>]
     # @param domain [String]
+    # @param id_type [String, nil]
     # @param related_item_page [Integer, nil]
     # @param relationship_type [String, nil]
     # @param response_groups [Array<String>, nil]
     # @return [Rapa::Responses::ListItemsResponse]
     def list_items(
-      asins:,
+      item_ids:,
       domain:,
+      id_type: nil,
       related_item_page: nil,
       relationship_type: nil,
-      response_groups: nil
+      response_groups: nil,
+      search_index: nil
     )
       send_request(
-        asins: asins,
+        item_ids: item_ids,
         domain: domain,
+        id_type: id_type,
         query_class: ::Rapa::Queries::ListItemsQuery,
         related_item_page: related_item_page,
         relationship_type: relationship_type,
         response_class: ::Rapa::Responses::ListItemsResponse,
         response_groups: response_groups,
+        search_index: search_index
       )
     end
 

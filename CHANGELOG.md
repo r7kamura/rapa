@@ -1,3 +1,9 @@
+## 0.4.0
+
+- Add `:item_ids` option to `Rapa::Client#list_items`
+- Add `:item_type` option to `Rapa::Client#list_items`
+- Remove `:asins` option from `Rapa::Client#list_items`
+
 ## 0.3.3
 
 - Fix bug on no image set case

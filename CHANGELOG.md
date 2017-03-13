@@ -1,3 +1,7 @@
+## 0.4.1
+
+- Fix signature escape bug
+
 ## 0.4.0
 
 - Add `:item_ids` option to `Rapa::Client#list_items`

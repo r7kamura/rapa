@@ -1,4 +1,5 @@
 require "base64"
+require "cgi"
 require "openssl"
 
 module Rapa
@@ -18,13 +19,15 @@ module Rapa
 
     # @return [String]
     def sign
-      ::Base64.encode64(
-        ::OpenSSL::HMAC.digest(
-          digest,
-          key,
-          source,
-        ),
-      ).chomp
+      ::CGI.escape(
+        ::Base64.encode64(
+          ::OpenSSL::HMAC.digest(
+            digest,
+            key,
+            source,
+          ),
+        ).chomp
+      )
     end
 
     private

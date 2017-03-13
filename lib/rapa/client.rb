@@ -1,3 +1,4 @@
+require "cgi"
 require "faraday"
 require "faraday_middleware"
 require "uri"

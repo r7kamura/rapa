@@ -118,13 +118,13 @@ module Rapa
       url = ::Rapa::Url.new(domain: domain)
       uri = ::URI.parse(url.to_s)
       query_string = query.to_s
-      signature = ::Rapa::Signer.new(
+      signature = CGI.escape(::Rapa::Signer.new(
         host: uri.host,
         http_method: "GET",
         key: secret_access_key,
         path: uri.path,
         query_string: query_string,
-      ).sign
+      ).sign)
       faraday_response = connection.get(uri, query.to_hash.merge(Signature: signature))
       response_class.new(faraday_response)
     end

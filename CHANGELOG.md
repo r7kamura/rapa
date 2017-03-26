@@ -2,36 +2,36 @@
 
 - Add `Rapa::Resources::ItemResource#ebook?`
 
-## 0.4.2
+## v0.4.2
 
 - Add `:browse_node_id` options to `Rapa::Client#search_items`
 - Add `:item_page` option to `Rapa::Client#search_items`
 - Add `:power` option to `Rapa::Client#search_items`
 - Add `Rapa::Queries::BaseQuery#inspect`
 
-## 0.4.1
+## v0.4.1
 
 - Fix signature escape bug
 
-## 0.4.0
+## v0.4.0
 
 - Add `:item_ids` option to `Rapa::Client#list_items`
 - Add `:item_type` option to `Rapa::Client#list_items`
 - Remove `:asins` option from `Rapa::Client#list_items`
 
-## 0.3.3
+## v0.3.3
 
 - Fix bug on no image set case
 
-## 0.3.2
+## v0.3.2
 
 - Fix bug on multi image sets item
 
-## 0.3.1
+## v0.3.1
 
 - Fix escape bug of spaces in URL query
 
-## 0.3.0
+## v0.3.0
 
 - Add `Rapa::Responses::SearchItemsResponse#error`
 - Add `Rapa::Responses::SearchItemsResponse#has_error?`
@@ -39,22 +39,22 @@
 - Use `"All"` as default SearchIndex parameter
 - Fix bug that no files included in gem package
 
-## 0.2.1
+## v0.2.1
 
 - Add `Rapa::Responses::SearchItemsResponse#total_pages`
 - Add `Rapa::Responses::SearchItemsResponse#total_results`
 - Fix response parser on `Rapa::Client#search_items`
 
-## 0.2.0
+## v0.2.0
 
 - Add `Rapa::Client#search_items`
 
-## 0.1.0
+## v0.1.0
 
 - Add `Rapa::Resources::ItemResource`
 - Change required Ruby version from 2.2.2 to 2.3
 
-## 0.0.1
+## v0.0.1
 
 - 1st Release :tada:
 - Add `Rapa::Client#list_items`

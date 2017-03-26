@@ -80,6 +80,7 @@ response = client.list_items(
 Available options:
 
 - `:domain`
+- `:item_page`
 - `:keywords`
 - `:related_item_page`
 - `:relationship_type`

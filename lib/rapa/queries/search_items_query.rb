@@ -4,10 +4,18 @@ module Rapa
       SEARCH_INDEX_DEFAULT = "All"
       OPERATION = "ItemSearch"
 
+      property :ItemPage
       property :Keywords
       property :SearchIndex
 
-      # @return [Array<String>]
+      # @return [String, nil]
+      def ItemPage
+        if options[:item_page]
+          options[:item_page].to_s
+        end
+      end
+
+      # @return [String]
       def Keywords
         options[:keywords].join(",")
       end

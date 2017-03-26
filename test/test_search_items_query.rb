@@ -32,6 +32,29 @@ class TestSearchItemsQuery < Petitest::Test
     return_time
   end
 
+  def test_to_hash_with_browse_node_id
+    freeze_time
+    expected = {
+      "AssociateTag" => "dummy_associate_tag",
+      "AWSAccessKeyId" => "dummy_access_key_id",
+      "BrowseNode" => "DummyBrowseNodeId",
+      "Operation" => "ItemSearch",
+      "SearchIndex" => "All",
+      "Service" => "AWSECommerceService",
+      "Timestamp" => "2000-01-01T00%3A00%3A00Z",
+      "Version" => "2013-08-01",
+    }
+    actual = ::Rapa::Queries::SearchItemsQuery.new(
+      access_key_id: "dummy_access_key_id",
+      associate_tag: "dummy_associate_tag",
+      browse_node_id: "DummyBrowseNodeId",
+    ).to_hash
+    assert do
+      actual == expected
+    end
+    return_time
+  end
+
   def test_to_hash_with_item_page_option
     freeze_time
     expected = {

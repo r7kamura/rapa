@@ -4,10 +4,18 @@ module Rapa
       SEARCH_INDEX_DEFAULT = "All"
       OPERATION = "ItemSearch"
 
+      property :BrowseNode
       property :ItemPage
       property :Keywords
       property :Power
       property :SearchIndex
+
+      # @return [String, nil]
+      def BrowseNode
+        if options[:browse_node_id]
+          options[:browse_node_id].to_s
+        end
+      end
 
       # @return [String, nil]
       def ItemPage
@@ -16,9 +24,11 @@ module Rapa
         end
       end
 
-      # @return [String]
+      # @return [String, nil]
       def Keywords
-        options[:keywords].join(",")
+        if options[:keywords] && options[:keywords].any?
+          options[:keywords].join(",")
+        end
       end
 
       # @note Override

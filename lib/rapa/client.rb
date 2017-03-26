@@ -51,9 +51,10 @@ module Rapa
       )
     end
 
+    # @param browse_node_id [Integer]
     # @param domain [String]
     # @param item_page [Integer, nil]
-    # @param keywords [Array<String>]
+    # @param keywords [Array<String>, nil]
     # @param power [String, nil]
     # @param related_item_page [Integer, nil]
     # @param relationship_type [String, nil]
@@ -61,9 +62,10 @@ module Rapa
     # @param search_index [String, nil]
     # @return [Rapa::Responses::SearchItemsResponse]
     def search_items(
+      browse_node_id: nil,
       domain:,
       item_page: nil,
-      keywords:,
+      keywords: nil,
       power: nil,
       related_item_page: nil,
       relationship_type: nil,
@@ -71,6 +73,7 @@ module Rapa
       search_index: nil
     )
       send_request(
+        browse_node_id: browse_node_id,
         domain: domain,
         item_page: item_page,
         keywords: keywords,

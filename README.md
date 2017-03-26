@@ -79,6 +79,7 @@ response = client.list_items(
 
 Available options:
 
+- `:browse_node_id`
 - `:domain`
 - `:item_page`
 - `:keywords`

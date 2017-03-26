@@ -1,5 +1,6 @@
 ## Unreleased
 
+- Add `:browse_node_id` options to `Rapa::Client#search_items`
 - Add `:item_page` option to `Rapa::Client#search_items`
 - Add `:power` option to `Rapa::Client#search_items`
 - Add `Rapa::Queries::BaseQuery#inspect`

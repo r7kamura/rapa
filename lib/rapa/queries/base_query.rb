@@ -41,6 +41,11 @@ module Rapa
         @options = options
       end
 
+      # @note Override
+      def inspect
+        "#<#{self.class}>"
+      end
+
       # @return [String]
       def AssociateTag
         options[:associate_tag]

@@ -3,7 +3,7 @@ require "petitest/power_assert"
 require "rapa"
 require "timecop"
 
-class RapaQueriesSearchItemsQueryTest < Petitest::Test
+class TestSearchItemsQuery < Petitest::Test
   prepend ::Petitest::PowerAssert
 
   # @return [Rapa::Queries::SearchItemsQuery]

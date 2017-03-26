@@ -1,3 +1,7 @@
+## Unreleased
+
+- Add `Rapa::Queries::BaseQuery#inspect`
+
 ## 0.4.1
 
 - Fix signature escape bug

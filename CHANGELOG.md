@@ -1,4 +1,4 @@
-## Unreleased
+## v0.4.3
 
 - Add `Rapa::Resources::ItemResource#ebook?`
 

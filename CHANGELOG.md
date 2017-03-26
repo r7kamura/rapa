@@ -1,4 +1,4 @@
-## Unreleased
+## 0.4.2
 
 - Add `:browse_node_id` options to `Rapa::Client#search_items`
 - Add `:item_page` option to `Rapa::Client#search_items`

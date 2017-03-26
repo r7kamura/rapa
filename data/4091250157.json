@@ -1,0 +1,261 @@
+{
+  "ASIN": "4091250157",
+  "DetailPageURL": "https://www.amazon.co.jp/%E3%81%8B%E3%82%89%E3%81%8B%E3%81%84%E4%B8%8A%E6%89%8B%E3%81%AE%E9%AB%98%E6%9C%A8%E3%81%95%E3%82%93-1-%E3%82%B2%E3%83%83%E3%82%B5%E3%83%B3%E5%B0%91%E5%B9%B4%E3%82%B5%E3%83%B3%E3%83%87%E3%83%BC%E3%82%B3%E3%83%9F%E3%83%83%E3%82%AF%E3%82%B9%E3%82%B9%E3%83%9A%E3%82%B7%E3%83%A3%E3%83%AB-%E5%B1%B1%E6%9C%AC-%E5%B4%87%E4%B8%80%E6%9C%97/dp/4091250157%3FSubscriptionId%3DAKIAIRTX3KGK3CZPXPOA%26tag%3Dr7kamura-22%26linkCode%3Dxm2%26camp%3D2025%26creative%3D165953%26creativeASIN%3D4091250157",
+  "ItemLinks": {
+    "ItemLink": [
+      {
+        "Description": "Add To Wishlist",
+        "URL": "https://www.amazon.co.jp/gp/registry/wishlist/add-item.html%3Fasin.0%3D4091250157%26SubscriptionId%3DAKIAIRTX3KGK3CZPXPOA%26tag%3Dr7kamura-22%26linkCode%3Dxm2%26camp%3D2025%26creative%3D5143%26creativeASIN%3D4091250157"
+      },
+      {
+        "Description": "Tell A Friend",
+        "URL": "https://www.amazon.co.jp/gp/pdp/taf/4091250157%3FSubscriptionId%3DAKIAIRTX3KGK3CZPXPOA%26tag%3Dr7kamura-22%26linkCode%3Dxm2%26camp%3D2025%26creative%3D5143%26creativeASIN%3D4091250157"
+      },
+      {
+        "Description": "All Customer Reviews",
+        "URL": "https://www.amazon.co.jp/review/product/4091250157%3FSubscriptionId%3DAKIAIRTX3KGK3CZPXPOA%26tag%3Dr7kamura-22%26linkCode%3Dxm2%26camp%3D2025%26creative%3D5143%26creativeASIN%3D4091250157"
+      },
+      {
+        "Description": "All Offers",
+        "URL": "https://www.amazon.co.jp/gp/offer-listing/4091250157%3FSubscriptionId%3DAKIAIRTX3KGK3CZPXPOA%26tag%3Dr7kamura-22%26linkCode%3Dxm2%26camp%3D2025%26creative%3D5143%26creativeASIN%3D4091250157"
+      }
+    ]
+  },
+  "SmallImage": {
+    "URL": "https://images-fe.ssl-images-amazon.com/images/I/51g3RhKRFmL._SL75_.jpg",
+    "Height": {
+      "__content__": "75",
+      "Units": "pixels"
+    },
+    "Width": {
+      "__content__": "53",
+      "Units": "pixels"
+    }
+  },
+  "MediumImage": {
+    "URL": "https://images-fe.ssl-images-amazon.com/images/I/51g3RhKRFmL._SL160_.jpg",
+    "Height": {
+      "__content__": "160",
+      "Units": "pixels"
+    },
+    "Width": {
+      "__content__": "113",
+      "Units": "pixels"
+    }
+  },
+  "LargeImage": {
+    "URL": "https://images-fe.ssl-images-amazon.com/images/I/51g3RhKRFmL.jpg",
+    "Height": {
+      "__content__": "500",
+      "Units": "pixels"
+    },
+    "Width": {
+      "__content__": "353",
+      "Units": "pixels"
+    }
+  },
+  "ImageSets": {
+    "ImageSet": {
+      "SwatchImage": {
+        "URL": "https://images-fe.ssl-images-amazon.com/images/I/51g3RhKRFmL._SL30_.jpg",
+        "Height": {
+          "__content__": "30",
+          "Units": "pixels"
+        },
+        "Width": {
+          "__content__": "21",
+          "Units": "pixels"
+        }
+      },
+      "SmallImage": {
+        "URL": "https://images-fe.ssl-images-amazon.com/images/I/51g3RhKRFmL._SL75_.jpg",
+        "Height": {
+          "__content__": "75",
+          "Units": "pixels"
+        },
+        "Width": {
+          "__content__": "53",
+          "Units": "pixels"
+        }
+      },
+      "ThumbnailImage": {
+        "URL": "https://images-fe.ssl-images-amazon.com/images/I/51g3RhKRFmL._SL75_.jpg",
+        "Height": {
+          "__content__": "75",
+          "Units": "pixels"
+        },
+        "Width": {
+          "__content__": "53",
+          "Units": "pixels"
+        }
+      },
+      "TinyImage": {
+        "URL": "https://images-fe.ssl-images-amazon.com/images/I/51g3RhKRFmL._SL110_.jpg",
+        "Height": {
+          "__content__": "110",
+          "Units": "pixels"
+        },
+        "Width": {
+          "__content__": "78",
+          "Units": "pixels"
+        }
+      },
+      "MediumImage": {
+        "URL": "https://images-fe.ssl-images-amazon.com/images/I/51g3RhKRFmL._SL160_.jpg",
+        "Height": {
+          "__content__": "160",
+          "Units": "pixels"
+        },
+        "Width": {
+          "__content__": "113",
+          "Units": "pixels"
+        }
+      },
+      "LargeImage": {
+        "URL": "https://images-fe.ssl-images-amazon.com/images/I/51g3RhKRFmL.jpg",
+        "Height": {
+          "__content__": "500",
+          "Units": "pixels"
+        },
+        "Width": {
+          "__content__": "353",
+          "Units": "pixels"
+        }
+      },
+      "HiResImage": {
+        "URL": "https://images-fe.ssl-images-amazon.com/images/I/71srV4KOH%2BL.jpg",
+        "Height": {
+          "__content__": "1000",
+          "Units": "pixels"
+        },
+        "Width": {
+          "__content__": "706",
+          "Units": "pixels"
+        }
+      },
+      "Category": "primary"
+    }
+  },
+  "ItemAttributes": {
+    "Author": "山本 崇一朗",
+    "Binding": "コミック",
+    "EAN": "9784091250155",
+    "EANList": {
+      "EANListElement": "9784091250155"
+    },
+    "IsAdultProduct": "0",
+    "ISBN": "4091250157",
+    "Label": "小学館",
+    "Languages": {
+      "Language": {
+        "Name": "日本語",
+        "Type": "Published"
+      }
+    },
+    "Manufacturer": "小学館",
+    "NumberOfPages": "155",
+    "PackageDimensions": {
+      "Height": {
+        "__content__": "55",
+        "Units": "100分の1インチ"
+      },
+      "Length": {
+        "__content__": "701",
+        "Units": "100分の1インチ"
+      },
+      "Weight": {
+        "__content__": "35",
+        "Units": "100分の1ポンド"
+      },
+      "Width": {
+        "__content__": "512",
+        "Units": "100分の1インチ"
+      }
+    },
+    "ProductGroup": "Book",
+    "ProductTypeName": "ABIS_BOOK",
+    "PublicationDate": "2014-06-12",
+    "Publisher": "小学館",
+    "ReleaseDate": "2014-06-12",
+    "Studio": "小学館",
+    "Title": "からかい上手の高木さん 1 (ゲッサン少年サンデーコミックススペシャル)"
+  },
+  "OfferSummary": {
+    "LowestNewPrice": {
+      "Amount": "596",
+      "CurrencyCode": "JPY",
+      "FormattedPrice": "￥ 596"
+    },
+    "LowestUsedPrice": {
+      "Amount": "153",
+      "CurrencyCode": "JPY",
+      "FormattedPrice": "￥ 153"
+    },
+    "LowestCollectiblePrice": {
+      "Amount": "2799",
+      "CurrencyCode": "JPY",
+      "FormattedPrice": "￥ 2,799"
+    },
+    "TotalNew": "6",
+    "TotalUsed": "27",
+    "TotalCollectible": "2",
+    "TotalRefurbished": "0"
+  },
+  "BrowseNodes": {
+    "BrowseNode": [
+      {
+        "BrowseNodeId": "2278488051",
+        "Name": "コミック",
+        "Ancestors": {
+          "BrowseNode": {
+            "BrowseNodeId": "466280",
+            "Name": "コミック・ラノベ・BL",
+            "Ancestors": {
+              "BrowseNode": {
+                "BrowseNodeId": "465610",
+                "Name": "ジャンル別",
+                "IsCategoryRoot": "1",
+                "Ancestors": {
+                  "BrowseNode": {
+                    "BrowseNodeId": "465392",
+                    "Name": "本"
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      {
+        "BrowseNodeId": "10805011",
+        "Name": "小学館",
+        "Ancestors": {
+          "BrowseNode": {
+            "BrowseNodeId": "465614",
+            "Name": "By Publishers",
+            "Ancestors": {
+              "BrowseNode": {
+                "BrowseNodeId": "465392",
+                "Name": "本"
+              }
+            }
+          }
+        }
+      }
+    ]
+  },
+  "AlternateVersions": {
+    "AlternateVersion": [
+      {
+        "ASIN": "B00N2QXHRW",
+        "Title": "からかい上手の高木さん（１） (ゲッサン少年サンデーコミックス)",
+        "Binding": "Kindle版"
+      },
+      {
+        "ASIN": "B06XDNHTX5",
+        "Title": "からかい上手の高木さん（１）【期間限定　無料お試し版】 (ゲッサン少年サンデーコミックス)",
+        "Binding": "Kindle版"
+      }
+    ]
+  }
+}

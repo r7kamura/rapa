@@ -6,7 +6,10 @@
 
 An API client library for Amazon Product Advertising API, written in Ruby.
 
-See https://affiliate-program.amazon.com/gp/advertising/api/detail/main.html for more details about Amazon Product Advertising API.
+See the official documents for more details about Amazon Product Advertising API.
+
+- http://docs.aws.amazon.com/AWSECommerceService/latest/DG/Welcome.html
+- https://affiliate-program.amazon.com/gp/advertising/api/detail/main.html
 
 ## Requirements
 
@@ -172,7 +175,7 @@ Available methods:
 
 ### Domain
 
-Available domain examples:
+Available `:domain` option examples:
 
 - `"ca"`
 - `"cn"`
@@ -189,7 +192,7 @@ Available domain examples:
 
 ### IdType
 
-Available values:
+Available `:id_type` option examples:
 
 - `"ASIN"`
 - `"EAN"`
@@ -200,7 +203,7 @@ Available values:
 
 ### SearchIndex
 
-Available SearchIndex examples:
+Available `:search_index` option examples:
 
 - `"All"`
 - `"Apparel"`

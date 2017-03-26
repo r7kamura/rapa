@@ -125,6 +125,7 @@ Available methods:
 - `#creator_name`
 - `#creator_role`
 - `#ean`
+- `#ebook?`
 - `#episode_sequence`
 - `#genre`
 - `#has_customer_reviews?`

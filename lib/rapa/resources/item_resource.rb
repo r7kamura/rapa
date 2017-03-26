@@ -56,6 +56,11 @@ module Rapa
         source.dig("ItemAttributes", "EAN")
       end
 
+      # @return [Boolean]
+      def ebook?
+        source.dig("ItemAttributes", "ProductGroup") == "eBooks"
+      end
+
       # @return [Integer, nil]
       def episode_sequence
         if value = source.dig("ItemAttributes", "EpisodeSequence")

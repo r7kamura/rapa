@@ -54,6 +54,7 @@ module Rapa
     # @param domain [String]
     # @param item_page [Integer, nil]
     # @param keywords [Array<String>]
+    # @param power [String, nil]
     # @param related_item_page [Integer, nil]
     # @param relationship_type [String, nil]
     # @param response_groups [Array<String>, nil]
@@ -63,6 +64,7 @@ module Rapa
       domain:,
       item_page: nil,
       keywords:,
+      power: nil,
       related_item_page: nil,
       relationship_type: nil,
       response_groups: nil,
@@ -72,6 +74,7 @@ module Rapa
         domain: domain,
         item_page: item_page,
         keywords: keywords,
+        power: power,
         query_class: ::Rapa::Queries::SearchItemsQuery,
         related_item_page: related_item_page,
         relationship_type: relationship_type,

@@ -82,6 +82,7 @@ Available options:
 - `:domain`
 - `:item_page`
 - `:keywords`
+- `:power`
 - `:related_item_page`
 - `:relationship_type`
 - `:response_groups`

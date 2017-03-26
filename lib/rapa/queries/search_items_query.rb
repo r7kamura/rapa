@@ -6,6 +6,7 @@ module Rapa
 
       property :ItemPage
       property :Keywords
+      property :Power
       property :SearchIndex
 
       # @return [String, nil]
@@ -23,6 +24,11 @@ module Rapa
       # @note Override
       def Operation
         OPERATION
+      end
+
+      # @return [String, nil]
+      def Power
+        options[:power]
       end
 
       # @return [String]

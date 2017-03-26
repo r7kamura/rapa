@@ -1,6 +1,7 @@
 ## Unreleased
 
 - Add `:item_page` option to `Rapa::Client#search_items`
+- Add `:power` option to `Rapa::Client#search_items`
 - Add `Rapa::Queries::BaseQuery#inspect`
 
 ## 0.4.1

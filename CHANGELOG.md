@@ -1,4 +1,4 @@
-## Unreleased
+## v0.5.1
 
 - Fix `Rapa::Resources::ItemResource#alternate_versions` type
 - Fix `Rapa::Resources::ItemResource#authors` type

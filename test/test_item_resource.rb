@@ -7,33 +7,53 @@ class TestItemResource < Petitest::Test
   extend ::Petitest::Spec
   prepend ::Petitest::PowerAssert
 
+  let(:asin) do
+    "4091250157"
+  end
+
+  let(:item_resource) do
+    ::Rapa::Resources::ItemResource.new(source)
+  end
+
+  let(:source) do
+    content = ::File.read("data/#{asin}.json")
+    ::JSON.parse(content)
+  end
+
+  describe "#browse_nodes" do
+    let(:subject) do
+      item_resource.browse_nodes
+    end
+
+    it "returns an Array of Rapa::BrowseNode" do
+      assert do
+        subject.is_a?(::Array)
+      end
+
+      assert do
+        subject[0].is_a?(::Rapa::BrowseNode)
+      end
+    end
+  end
+
   describe "#ebook?" do
-    def source
-      content = ::File.read("data/#{asin}.json")
-      ::JSON.parse(content)
+    let(:subject) do
+      item_resource.ebook?
     end
 
     context "with source of paper book" do
-      def asin
-        "4091250157"
-      end
-
       it "returns false" do
-        assert do
-          ::Rapa::Resources::ItemResource.new(source).ebook? == false
-        end
+        assert { subject == false }
       end
     end
 
     context "with source of e-book" do
-      def asin
+      let(:asin) do
         "B06XDNHTX5"
       end
 
       it "returns true" do
-        assert do
-          ::Rapa::Resources::ItemResource.new(source).ebook? == true
-        end
+        assert { subject == true }
       end
     end
   end

@@ -1,3 +1,7 @@
+## Unreleased
+
+- Change `Rapa::Resources::ItemResource#browse_nodes` returned value type
+
 ## v0.4.3
 
 - Add `Rapa::Resources::ItemResource#ebook?`

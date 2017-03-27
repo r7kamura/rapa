@@ -38,7 +38,9 @@ module Rapa
 
       # @return [Array, nil]
       def browse_nodes
-        source.dig("BrowseNodes", "BrowseNode")
+        source.dig("BrowseNodes", "BrowseNode").map do |browse_node_source|
+          ::Rapa::BrowseNode.new(browse_node_source)
+        end
       end
 
       # @return [String, nil]

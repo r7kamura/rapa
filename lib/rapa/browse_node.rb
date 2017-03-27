@@ -8,12 +8,25 @@ module Rapa
       @source = source
     end
 
+    # @return [Array<Rapa::BrowseNode>]
+    def ancestors
+      array = []
+      current = self
+      while parent = current.parent do
+        array << parent
+        current = parent
+      end
+      array
+    end
+
     # @return [Array<Rapa::BrowseNode>, nil]
     def children
       if child_sources = source.dig("Children", "BrowseNode")
         child_sources.map do |child_source|
           ::Rapa::BrowseNode.new(child_source)
         end
+      else
+        []
       end
     end
 

@@ -31,7 +31,27 @@ class TestItemResource < Petitest::Test
       end
 
       assert do
-        subject[0].is_a?(::Rapa::BrowseNode)
+        subject[0].id == 2278488051
+      end
+
+      assert do
+        subject[0].name == "コミック"
+      end
+
+      assert do
+        subject[0].ancestors[0].name == "コミック・ラノベ・BL"
+      end
+
+      assert do
+        subject[0].ancestors[1].name == "ジャンル別"
+      end
+
+      assert do
+        subject[0].ancestors[2].name == "本"
+      end
+
+      assert do
+        subject[0].ancestors[3].nil?
       end
     end
   end

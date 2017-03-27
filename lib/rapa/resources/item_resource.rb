@@ -36,7 +36,7 @@ module Rapa
         source.dig("ItemAttributes", "Binding")
       end
 
-      # @return [Array, nil]
+      # @return [Array]
       def browse_nodes
         source.dig("BrowseNodes", "BrowseNode").map do |browse_node_source|
           ::Rapa::BrowseNode.new(browse_node_source)

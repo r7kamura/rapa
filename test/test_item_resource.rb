@@ -20,6 +20,38 @@ class TestItemResource < Petitest::Test
     ::JSON.parse(content)
   end
 
+  describe "#alternate_versions" do
+    let(:subject) do
+      item_resource.alternate_versions
+    end
+
+    it "returns an Array of Rapa::AlternateVersion" do
+      assert do
+        subject.is_a?(::Array)
+      end
+
+      assert do
+        subject[0].is_a?(::Rapa::AlternateVersion)
+      end
+    end
+  end
+
+  describe "#authors" do
+    let(:subject) do
+      item_resource.authors
+    end
+
+    it "returns an Array of String" do
+      assert do
+        subject.is_a?(::Array)
+      end
+
+      assert do
+        subject[0].is_a?(::String)
+      end
+    end
+  end
+
   describe "#browse_nodes" do
     let(:subject) do
       item_resource.browse_nodes
@@ -86,6 +118,50 @@ class TestItemResource < Petitest::Test
 
       it "returns true" do
         assert { subject == true }
+      end
+    end
+  end
+
+  describe "#languages" do
+    let(:subject) do
+      item_resource.languages
+    end
+
+    it "returns an Array of Rapa::Language" do
+      assert do
+        subject.is_a?(::Array)
+      end
+
+      assert do
+        subject[0].is_a?(::Rapa::Language)
+      end
+
+      assert do
+        subject[0].name == "日本語"
+      end
+    end
+  end
+
+  describe "#related_items" do
+    let(:subject) do
+      item_resource.related_items
+    end
+
+    it "returns an Array" do
+      assert do
+        subject.is_a?(::Array)
+      end
+    end
+  end
+
+  describe "#similar_products" do
+    let(:subject) do
+      item_resource.similar_products
+    end
+
+    it "returns an Array" do
+      assert do
+        subject.is_a?(::Array)
       end
     end
   end

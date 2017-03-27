@@ -1,3 +1,12 @@
+## Unreleased
+
+- Fix `Rapa::Resources::ItemResource#alternate_versions` type
+- Fix `Rapa::Resources::ItemResource#authors` type
+- Fix `Rapa::Resources::ItemResource#browse_nodes` type
+- Fix `Rapa::Resources::ItemResource#languages` type
+- Fix `Rapa::Resources::ItemResource#related_items` type
+- Fix `Rapa::Resources::ItemResource#similar_products` type
+
 ## v0.5.0
 
 - Change `Rapa::Resources::ItemResource#browse_nodes` returned value type

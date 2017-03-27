@@ -10,12 +10,17 @@ module Rapa
         end
       end
 
-      # @return [Array<Rapa::AlternateVersion>, nil]
+      # @return [Array<Rapa::AlternateVersion>]
       def alternate_versions
-        if alternate_version_sources = source.dig("AlternateVersions", "AlternateVersion")
-          ::Array.wrap(alternate_version_sources).map do |alternate_version_source|
-            ::Rapa::AlternateVersion.new(alternate_version_source)
-          end
+        case alternate_version_source_or_sources = source.dig("AlternateVersions", "AlternateVersion")
+        when ::Array
+          alternate_version_source_or_sources
+        when ::Hash
+          [alternate_version_source_or_sources]
+        else
+          []
+        end.map do |alternate_version_source|
+          ::Rapa::AlternateVersion.new(alternate_version_source)
         end
       end
 
@@ -24,10 +29,15 @@ module Rapa
         source["ASIN"]
       end
 
-      # @return [Array<String>, nil]
+      # @return [Array<String>]
       def authors
-        if author_sources = source.dig("ItemAttributes", "Author")
-          Array(author_sources)
+        case author_source_or_sources = source.dig("ItemAttributes", "Author")
+        when ::Array
+          author_source_or_sources
+        when ::String
+          [author_source_or_sources]
+        else
+          []
         end
       end
 
@@ -36,9 +46,16 @@ module Rapa
         source.dig("ItemAttributes", "Binding")
       end
 
-      # @return [Array]
+      # @return [Array<Rapa::BrowseNode>]
       def browse_nodes
-        source.dig("BrowseNodes", "BrowseNode").map do |browse_node_source|
+        case browse_node_source_or_sources = source.dig("BrowseNodes", "BrowseNode")
+        when ::Array
+          browse_node_source_or_sources
+        when ::Hash
+          [browse_node_source_or_sources]
+        else
+          []
+        end.map do |browse_node_source|
           ::Rapa::BrowseNode.new(browse_node_source)
         end
       end
@@ -146,12 +163,17 @@ module Rapa
         source.dig("ItemAttributes", "Label")
       end
 
-      # @return [Array<Rapa::Language>, nil]
+      # @return [Array<Rapa::Language>]
       def languages
-        if language_sources = source.dig("ItemAttributes", "Languages", "Language")
-          language_sources.map do |language_source|
-            ::Rapa::Language.new(language_source)
-          end
+        case language_source_or_sources = source.dig("ItemAttributes", "Languages", "Language")
+        when ::Array
+          language_source_or_sources
+        when ::Hash
+          [language_source_or_sources]
+        else
+          []
+        end.map do |language_source|
+          ::Rapa::Language.new(language_source)
         end
       end
 
@@ -238,16 +260,17 @@ module Rapa
         end
       end
 
-      # @return [Array<Rapa::Resources::ItemResource>, nil]
+      # @return [Array<Rapa::Resources::ItemResource>]
       def related_items
-        if source_or_sources = source.dig("RelatedItems", "RelatedItem")
-          if source_or_sources.is_a?(::Array)
-            source_or_sources
-          else
-            [source_or_sources]
-          end.map do |related_item_source|
-            ::Rapa::Resources::ItemResource.new(related_item_source["Item"])
-          end
+        case item_source_or_sources = source.dig("RelatedItems", "RelatedItem")
+        when ::Array
+          item_source_or_sources
+        when ::Hash
+          [item_source_or_sources]
+        else
+          []
+        end.map do |related_item_source|
+          ::Rapa::Resources::ItemResource.new(related_item_source["Item"])
         end
       end
 
@@ -287,12 +310,17 @@ module Rapa
         end
       end
 
-      # @return [Array<Rapa::SimilarProduct>, nil]
+      # @return [Array<Rapa::SimilarProduct>]
       def similar_products
-        if similar_product_sources = source["SimilarProducts"]
-          similar_product_sources.map do |similar_product_source|
-            ::Rapa::SimilarProduct.new(similar_product_source)
-          end
+        case similar_product_source_or_sources = source["SimilarProducts"]
+        when ::Array
+          similar_product_sources
+        when ::Hash
+          [similar_product_source_or_sources]
+        else
+          []
+        end.map do |similar_product_source|
+          ::Rapa::SimilarProduct.new(similar_product_source)
         end
       end
 

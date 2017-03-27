@@ -1,4 +1,4 @@
-## Unreleased
+## v0.5.0
 
 - Change `Rapa::Resources::ItemResource#browse_nodes` returned value type
 - Add `Rapa::BrowseNode#ancestors`

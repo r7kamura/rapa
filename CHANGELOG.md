@@ -1,3 +1,7 @@
+## Unreleased
+
+- Support YYYY-mm format on `#publication_date` and `#release_date`
+
 ## v0.5.1
 
 - Fix `Rapa::Resources::ItemResource#alternate_versions` type

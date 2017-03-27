@@ -230,7 +230,7 @@ module Rapa
       # @return [Date, nil]
       def publication_date
         if value = source.dig("ItemAttributes", "PublicationDate")
-          ::Date.parse(value)
+          parse_date(value)
         end
       end
 
@@ -287,7 +287,7 @@ module Rapa
       # @return [Date, nil]
       def release_date
         if value = source.dig("ItemAttributes", "ReleaseDate")
-          ::Date.parse(value)
+          parse_date(value)
         end
       end
 
@@ -400,6 +400,13 @@ module Rapa
         @item_links ||= source["ItemLinks"]["ItemLink"].each_with_object({}) do |element, result|
           result[element["Description"]] = element["URL"]
         end
+      end
+
+      # @param string [String]
+      # @return [Date]
+      def parse_date(string)
+        string += "-01" if /\A(\d{4})-(\d{2})\z/ === string
+        ::Date.parse(string)
       end
     end
   end

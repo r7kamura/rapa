@@ -142,6 +142,18 @@ class TestItemResource < Petitest::Test
     end
   end
 
+  describe "#publication_date" do
+    let(:subject) do
+      item_resource.publication_date
+    end
+
+    it "returns a Date" do
+      assert do
+        subject == ::Date.new(2014, 6, 12)
+      end
+    end
+  end
+
   describe "#related_items" do
     let(:subject) do
       item_resource.related_items
@@ -150,6 +162,18 @@ class TestItemResource < Petitest::Test
     it "returns an Array" do
       assert do
         subject.is_a?(::Array)
+      end
+    end
+  end
+
+  describe "#release_date" do
+    let(:subject) do
+      item_resource.release_date
+    end
+
+    it "returns a Date" do
+      assert do
+        subject == ::Date.new(2014, 6, 12)
       end
     end
   end

@@ -53,6 +53,18 @@ class TestItemResource < Petitest::Test
       assert do
         subject[0].ancestors[3].nil?
       end
+
+      assert do
+        subject[0].self_or_ancestors[0].name == "コミック"
+      end
+
+      assert do
+        subject[0].self_or_ancestors[1].name == "コミック・ラノベ・BL"
+      end
+
+      assert do
+        subject[0].self_or_ancestors.length == 4
+      end
     end
   end
 

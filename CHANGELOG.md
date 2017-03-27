@@ -2,6 +2,7 @@
 
 - Change `Rapa::Resources::ItemResource#browse_nodes` returned value type
 - Add `Rapa::BrowseNode#ancestors`
+- Add `Rapa::BrowseNode#self_or_ancestors`
 
 ## v0.4.3
 

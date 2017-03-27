@@ -47,6 +47,11 @@ module Rapa
       end
     end
 
+    # @return [Array<Rapa::BrowseNode>]
+    def self_or_ancestors
+      [self] + ancestors
+    end
+
     # @return [String]
     def title
       source["Title"]

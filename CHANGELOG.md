@@ -1,4 +1,4 @@
-## Unreleased
+## v0.5.2
 
 - Support YYYY-mm format on `#publication_date` and `#release_date`
 

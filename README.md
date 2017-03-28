@@ -144,6 +144,9 @@ Available methods:
 - `#package_length`
 - `#package_weight`
 - `#package_width`
+- `#price_lowest_collectible`
+- `#price_lowest_new`
+- `#price_lowest_used`
 - `#product_group`
 - `#product_type_name`
 - `#publication_date`

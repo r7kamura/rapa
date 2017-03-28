@@ -217,6 +217,27 @@ module Rapa
         end
       end
 
+      # @return [Rapa::Price, nil]
+      def price_lowest_collectible
+        if price_source = source.dig("OfferSummary", "LowestCollectiblePrice")
+          ::Rapa::Price.new(price_source)
+        end
+      end
+
+      # @return [Rapa::Price, nil]
+      def price_lowest_new
+        if price_source = source.dig("OfferSummary", "LowestNewPrice")
+          ::Rapa::Price.new(price_source)
+        end
+      end
+
+      # @return [Rapa::Price, nil]
+      def price_lowest_used
+        if price_source = source.dig("OfferSummary", "LowestUsedPrice")
+          ::Rapa::Price.new(price_source)
+        end
+      end
+
       # @return [String, nil]
       def product_group
         source.dig("ItemAttributes", "ProductGroup")

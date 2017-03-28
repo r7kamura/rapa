@@ -142,6 +142,54 @@ class TestItemResource < Petitest::Test
     end
   end
 
+  describe "#price_lowest_collectible" do
+    let(:subject) do
+      item_resource.price_lowest_collectible
+    end
+
+    it "returns a Rapa::Price" do
+      assert do
+        subject.is_a?(::Rapa::Price)
+      end
+    end
+  end
+
+  describe "#price_lowest_new" do
+    let(:subject) do
+      item_resource.price_lowest_new
+    end
+
+    it "returns a Rapa::Price" do
+      assert do
+        subject.is_a?(::Rapa::Price)
+      end
+
+      assert do
+        subject.amount == 596
+      end
+
+      assert do
+        subject.currency_code == "JPY"
+      end
+
+      assert do
+        subject.formatted_price == "￥ 596"
+      end
+    end
+  end
+
+  describe "#price_lowest_used" do
+    let(:subject) do
+      item_resource.price_lowest_used
+    end
+
+    it "returns a Rapa::Price" do
+      assert do
+        subject.is_a?(::Rapa::Price)
+      end
+    end
+  end
+
   describe "#publication_date" do
     let(:subject) do
       item_resource.publication_date

@@ -1,4 +1,4 @@
-## Unreleased
+## v0.5.3
 
 - Add some price method on `Rapa::Resources::ItemResource`
 

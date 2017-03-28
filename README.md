@@ -11,10 +11,6 @@ See the official documents for more details about Amazon Product Advertising API
 - http://docs.aws.amazon.com/AWSECommerceService/latest/DG/Welcome.html
 - https://affiliate-program.amazon.com/gp/advertising/api/detail/main.html
 
-## Requirements
-
-- Ruby 2.3 or higher
-
 ## Installation
 
 Add this line to your application's Gemfile:

@@ -16,7 +16,7 @@ class TestItemResource < Petitest::Test
   end
 
   let(:source) do
-    content = ::File.read("data/#{asin}.json")
+    content = ::File.read("test/data/#{asin}.json")
     ::JSON.parse(content)
   end
 

@@ -424,10 +424,16 @@ module Rapa
       end
 
       # @param string [String]
-      # @return [Date]
+      # @return [Date, nil]
       def parse_date(string)
-        string += "-01" if /\A(\d{4})-(\d{2})\z/ === string
-        ::Date.parse(string)
+        case string
+        when /\A\d{1,4}\z/
+          ::Date.parse("#{string}-01-01")
+        when /\A\d{1,4}-\d{1,2}\z/
+          ::Date.parse("#{string}-01")
+        when /\A\d{1,4}-\d{1,2}-\d{1,2}\z/
+          ::Date.parse(string)
+        end
       end
     end
   end

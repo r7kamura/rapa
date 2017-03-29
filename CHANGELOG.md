@@ -1,4 +1,4 @@
-## Unreleased
+## v0.5.4
 
 - Support YYYY date format
 

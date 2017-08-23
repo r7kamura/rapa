@@ -13,6 +13,11 @@ module Rapa
         !error.nil?
       end
 
+      # @return [Boolean]
+      def has_valid_request?
+        body.dig("ItemLookupResponse", "Items", "Request", "IsValid") == "True"
+      end
+
       private
 
       # @note Override

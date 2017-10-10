@@ -1,3 +1,7 @@
+## v0.5.6
+
+- Fix faraday middlewares order
+
 ## v0.5.5
 
 - Support error handling methods on ListItemsResponse

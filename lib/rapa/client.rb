@@ -16,9 +16,9 @@ module Rapa
     # @return [Faraday::Connection]
     def connection
       @connection ||= ::Faraday::Connection.new do |connection|
-        connection.adapter :net_http
         connection.response :xml
         connection.options.params_encoder = ::Rapa::Encoder.new
+        connection.adapter :net_http
       end
     end
 

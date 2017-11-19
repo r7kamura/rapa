@@ -65,9 +65,30 @@ module Rapa
         source.dig("ItemAttributes", "Creator", "__content__")
       end
 
+      # @return [Array, nil]
+      def creator_names
+        if quantity_source = source.dig("ItemAttributes", "Creator")
+          ::Rapa::Creator.new(quantity_source).names
+        end
+      end
+
       # @return [String, nil]
       def creator_role
         source.dig("ItemAttributes", "Creator", "Role")
+      end
+
+      # @return [Array, nil]
+      def creator_roles
+        if quantity_source = source.dig("ItemAttributes", "Creator")
+          ::Rapa::Creator.new(quantity_source).roles
+        end
+      end
+
+      # @return [Array, nil]
+      def creators
+        if quantity_source = source.dig("ItemAttributes", "Creator")
+          ::Rapa::Creator.new(quantity_source).source
+        end
       end
 
       # @return [String, nil]

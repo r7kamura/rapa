@@ -118,6 +118,7 @@ Available methods:
 - `#authors`
 - `#binding`
 - `#browse_nodes`
+- `#creators`
 - `#creator_name`
 - `#creator_role`
 - `#ean`

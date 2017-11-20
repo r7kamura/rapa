@@ -60,7 +60,7 @@ module Rapa
         end
       end
 
-      # @return [Array, nil]
+      # @return [Array<Rapa::Creator>]
       def creators
         case creator_source_or_sources = source.dig("ItemAttributes", "Creator")
         when ::Array
@@ -69,20 +69,22 @@ module Rapa
           [creator_source_or_sources]
         else
           []
+        end.map do |creator_source|
+          ::Rapa::Creator.new(creator_source)
         end
       end
 
       # @return [String, nil]
       def creator_name
         if creators.present?
-          creators.first["__content__"]
+          creators.first.name
         end
       end
 
       # @return [String, nil]
       def creator_role
         if creators.present?
-          creators.first["Role"]
+          creators.first.role
         end
       end
 

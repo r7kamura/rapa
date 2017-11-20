@@ -105,17 +105,21 @@ class TestItemResource < Petitest::Test
       item_resource.creators
     end
 
-    it "returns an Array" do
+    it "returns an Array of Rapa::Creator" do
       assert do
         subject.is_a?(::Array)
       end
 
       assert do
-        subject[0]["__content__"] == "ガモウひろし"
+        subject[0].is_a?(::Rapa::Creator)
       end
 
       assert do
-        subject[0]["Role"] == "翻訳"
+        subject[0].name == "ガモウひろし"
+      end
+
+      assert do
+        subject[0].role == "翻訳"
       end
     end
   end

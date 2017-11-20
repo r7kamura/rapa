@@ -100,6 +100,30 @@ class TestItemResource < Petitest::Test
     end
   end
 
+  describe "#creator_name" do
+    let(:subject) do
+      item_resource.creator_name
+    end
+
+    it "returns first creator's name" do
+      assert do
+        subject == item_resource.creators.first.name
+      end
+    end
+  end
+
+  describe "#creator_role" do
+    let(:subject) do
+      item_resource.creator_role
+    end
+
+    it "returns first creator's role" do
+      assert do
+        subject == item_resource.creators.first.role
+      end
+    end
+  end
+
   describe "creators" do
     let(:subject) do
       item_resource.creators

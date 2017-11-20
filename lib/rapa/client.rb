@@ -22,6 +22,23 @@ module Rapa
       end
     end
 
+    # @param browse_node_id [Integer]
+    # @param domain [String]
+    # @param response_groups [Array<String>, nil]
+    def browse_node_lookup(
+      browse_node_id:,
+      domain:,
+      response_groups: nil
+    )
+      send_request(
+        browse_node_id: browse_node_id,
+        domain: domain,
+        query_class: ::Rapa::Queries::BrowseNodeLookup,
+        response_class: ::Rapa::Responses::BrowseNodeLookupResponse,
+        response_groups: response_groups
+      )
+    end
+
     # @param item_ids [Array<String>]
     # @param domain [String]
     # @param id_type [String, nil]

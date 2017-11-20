@@ -124,7 +124,7 @@ class TestItemResource < Petitest::Test
     end
   end
 
-  describe "creators" do
+  describe "#creators" do
     let(:subject) do
       item_resource.creators
     end

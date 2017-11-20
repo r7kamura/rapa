@@ -139,6 +139,10 @@
   "ItemAttributes": {
     "Author": "山本 崇一朗",
     "Binding": "コミック",
+    "Creator": {
+      "__content__": "ガモウひろし",
+      "Role": "翻訳"
+    },
     "EAN": "9784091250155",
     "EANList": {
       "EANListElement": "9784091250155"

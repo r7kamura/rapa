@@ -100,6 +100,26 @@ class TestItemResource < Petitest::Test
     end
   end
 
+  describe "creators" do
+    let(:subject) do
+      item_resource.creators
+    end
+
+    it "returns an Array" do
+      assert do
+        subject.is_a?(::Array)
+      end
+
+      assert do
+        subject[0]["__content__"] == "ガモウひろし"
+      end
+
+      assert do
+        subject[0]["Role"] == "翻訳"
+      end
+    end
+  end
+
   describe "#ebook?" do
     let(:subject) do
       item_resource.ebook?

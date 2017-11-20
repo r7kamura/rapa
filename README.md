@@ -108,6 +108,32 @@ Available methods:
 - `#total_pages`
 - `#total_results`
 
+### Rapa::Client#browse_node_lookup
+
+Available options:
+
+- `:browse_node_id`
+- `:domain`
+- `:response_groups`
+
+Returns a `Rapa::Responses::BrowseNodeLookupResponse`.
+
+```ruby
+response = client.browse_node_lookup(
+  browse_node_id: "...",
+  domain: "...",
+  response_groups: ["..."],
+)
+```
+
+### Rapa::Responses::BrowseNodeLookupResponse
+
+Available methods:
+
+- `#error`
+- `#has_error?`
+- `#has_valid_request?`
+
 ### Rapa::Resources::ItemResource
 
 Available methods:

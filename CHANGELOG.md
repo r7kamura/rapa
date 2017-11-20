@@ -1,3 +1,9 @@
+## v0.5.7
+
+- Add `Rapa::Resources::ItemResources#crators`
+- Fix `Rapa::Resources::ItemResources#crator_name` on multiple creators item
+- Fix `Rapa::Resources::ItemResources#crator_role` on multiple creators item
+
 ## v0.5.6
 
 - Fix faraday middlewares order

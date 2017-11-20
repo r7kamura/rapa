@@ -76,14 +76,14 @@ module Rapa
 
       # @return [String, nil]
       def creator_name
-        if creators.present?
+        if creators.first
           creators.first.name
         end
       end
 
       # @return [String, nil]
       def creator_role
-        if creators.present?
+        if creators.first
           creators.first.role
         end
       end

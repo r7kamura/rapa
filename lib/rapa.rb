@@ -1,6 +1,7 @@
 require "rapa/alternate_version"
 require "rapa/browse_node"
 require "rapa/client"
+require "rapa/creator"
 require "rapa/encoder"
 require "rapa/error"
 require "rapa/image"

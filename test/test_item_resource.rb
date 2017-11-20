@@ -100,6 +100,54 @@ class TestItemResource < Petitest::Test
     end
   end
 
+  describe "#creator_name" do
+    let(:subject) do
+      item_resource.creator_name
+    end
+
+    it "returns first creator's name" do
+      assert do
+        subject == item_resource.creators.first.name
+      end
+    end
+  end
+
+  describe "#creator_role" do
+    let(:subject) do
+      item_resource.creator_role
+    end
+
+    it "returns first creator's role" do
+      assert do
+        subject == item_resource.creators.first.role
+      end
+    end
+  end
+
+  describe "#creators" do
+    let(:subject) do
+      item_resource.creators
+    end
+
+    it "returns an Array of Rapa::Creator" do
+      assert do
+        subject.is_a?(::Array)
+      end
+
+      assert do
+        subject[0].is_a?(::Rapa::Creator)
+      end
+
+      assert do
+        subject[0].name == "ガモウひろし"
+      end
+
+      assert do
+        subject[0].role == "翻訳"
+      end
+    end
+  end
+
   describe "#ebook?" do
     let(:subject) do
       item_resource.ebook?

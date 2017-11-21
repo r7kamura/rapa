@@ -123,6 +123,10 @@ Available methods:
 - `#error`
 - `#has_error?`
 - `#has_valid_request?`
+- `#new_releases`
+- `#most_gifted`
+- `#most_wished_for`
+- `#top_sellers`
 
 ### Rapa::Responses::SearchItemsResponse
 
@@ -133,6 +137,17 @@ Available methods:
 - `#has_valid_request?`
 - `#total_pages`
 - `#total_results`
+
+### Rapa::Resources::BrowseNodeResource
+
+Available methods:
+
+- `#asin`
+- `#author`
+- `#eook?`
+- `#product_group`
+- `#title`
+- `#url_details_page`
 
 ### Rapa::Resources::ItemResource
 

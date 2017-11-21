@@ -25,6 +25,7 @@ module Rapa
     # @param browse_node_id [Integer]
     # @param domain [String]
     # @param response_groups [Array<String>, nil]
+    # @return [Rapa::Responses::LookupInBrowseNodeResponse]
     def lookup_in_browse_node(
       browse_node_id:,
       domain:,

@@ -5,7 +5,7 @@ module Rapa
 
       property :BrowseNodeId
 
-      # @return [String, nil]
+      # @return [String]
       def BrowseNodeId
         options[:browse_node_id].to_s
       end

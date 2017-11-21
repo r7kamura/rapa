@@ -74,6 +74,24 @@ response = client.list_items(
 )
 ```
 
+### Rapa::Client#lookup_in_browse_node
+
+Available options:
+
+- `:browse_node_id`
+- `:domain`
+- `:response_groups`
+
+Returns a `Rapa::Responses::LookupInBrowseNodeResponse`.
+
+```ruby
+response = client.lookup_in_browse_node(
+  browse_node_id: "...",
+  domain: "...",
+  response_groups: ["..."],
+)
+```
+
 ### Rapa::Client#search_items
 
 Available options:
@@ -98,6 +116,14 @@ response = client.search_items(
 )
 ```
 
+### Rapa::Responses::LookupBrowseNodeResponse
+
+Available methods:
+
+- `#error`
+- `#has_error?`
+- `#has_valid_request?`
+
 ### Rapa::Responses::SearchItemsResponse
 
 Available methods:
@@ -107,32 +133,6 @@ Available methods:
 - `#has_valid_request?`
 - `#total_pages`
 - `#total_results`
-
-### Rapa::Client#lookup_in_browse_node
-
-Available options:
-
-- `:browse_node_id`
-- `:domain`
-- `:response_groups`
-
-Returns a `Rapa::Responses::LookupInBrowseNodeResponse`.
-
-```ruby
-response = client.lookup_in_browse_node(
-  browse_node_id: "...",
-  domain: "...",
-  response_groups: ["..."],
-)
-```
-
-### Rapa::Responses::BrowseNodeLookupResponse
-
-Available methods:
-
-- `#error`
-- `#has_error?`
-- `#has_valid_request?`
 
 ### Rapa::Resources::ItemResource
 

@@ -1,6 +1,6 @@
 module Rapa
   module Queries
-    class BrowseNodeLookup < BaseQuery
+    class LookupInBrowseNode < BaseQuery
       OPERATION = "BrowseNodeLookup"
 
       property :BrowseNodeId

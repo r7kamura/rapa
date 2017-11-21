@@ -108,7 +108,7 @@ Available methods:
 - `#total_pages`
 - `#total_results`
 
-### Rapa::Client#browse_node_lookup
+### Rapa::Client#lookup_in_browse_node
 
 Available options:
 
@@ -116,10 +116,10 @@ Available options:
 - `:domain`
 - `:response_groups`
 
-Returns a `Rapa::Responses::BrowseNodeLookupResponse`.
+Returns a `Rapa::Responses::LookupInBrowseNodeResponse`.
 
 ```ruby
-response = client.browse_node_lookup(
+response = client.lookup_in_browse_node(
   browse_node_id: "...",
   domain: "...",
   response_groups: ["..."],

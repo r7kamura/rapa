@@ -4,7 +4,7 @@ require "petitest/power_assert"
 require "petitest/spec"
 require "rapa"
 
-class TestItemResource < Petitest::Test
+class TestBrowseNodeResource < Petitest::Test
   extend ::Petitest::Spec
   prepend ::Petitest::PowerAssert
 

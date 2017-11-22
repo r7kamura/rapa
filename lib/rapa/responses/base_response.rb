@@ -1,8 +1,6 @@
 module Rapa
   module Responses
     class BaseResponse
-      include ::Enumerable
-
       # @param faraday_response [Faraday::Response]
       def initialize(faraday_response)
         @faraday_response = faraday_response
@@ -13,21 +11,9 @@ module Rapa
         faraday_response.body
       end
 
-      # @note Implementation for Enumerable
-      def each(&block)
-        resources.each(&block)
-      end
-
       # @return [Faraday::Utils::Headers]
       def headers
         faraday_response.headers
-      end
-
-      # @return [Array<Rapa::Resources::ItemResource>]
-      def resources
-        sources.map do |source|
-          resource_class.new(source)
-        end
       end
 
       # @return [Integer]

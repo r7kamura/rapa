@@ -1,6 +1,6 @@
 module Rapa
   module Responses
-    class SearchItemsResponse < BaseResponse
+    class SearchItemsResponse < MultipleResourcesResponse
       # @return [Rapa::Error]
       def error
         if value = body.dig("ItemSearchResponse", "Items", "Request", "Errors", "Error")

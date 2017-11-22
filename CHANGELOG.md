@@ -1,3 +1,7 @@
+## v0.6.0
+
+- Add `Rapa::Client#lookup_browse_node`
+
 ## v0.5.7
 
 - Add `Rapa::Resources::ItemResources#crators`

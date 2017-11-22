@@ -74,7 +74,7 @@ response = client.list_items(
 )
 ```
 
-### Rapa::Client#lookup_in_browse_node
+### Rapa::Client#lookup_browse_node
 
 Available options:
 
@@ -82,10 +82,10 @@ Available options:
 - `:domain`
 - `:response_groups`
 
-Returns a `Rapa::Responses::LookupInBrowseNodeResponse`.
+Returns a `Rapa::Responses::LookupBrowseNodeResponse`.
 
 ```ruby
-response = client.lookup_in_browse_node(
+response = client.lookup_browse_node(
   browse_node_id: "...",
   domain: "...",
   response_groups: ["..."],

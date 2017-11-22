@@ -1,6 +1,6 @@
 module Rapa
   module Responses
-    class LookupInBrowseNodeResponse < BaseResponse
+    class LookupBrowseNodeResponse < BaseResponse
       # @return [Rapa::Error, nil]
       def error
         if value = body.dig("BrowseNodeLookupErrorResponse", "Error")

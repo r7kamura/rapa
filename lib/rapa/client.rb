@@ -25,8 +25,8 @@ module Rapa
     # @param browse_node_id [Integer]
     # @param domain [String]
     # @param response_groups [Array<String>, nil]
-    # @return [Rapa::Responses::LookupInBrowseNodeResponse]
-    def lookup_in_browse_node(
+    # @return [Rapa::Responses::LookupBrowseNodeResponse]
+    def lookup_browse_node(
       browse_node_id:,
       domain:,
       response_groups: nil
@@ -34,8 +34,8 @@ module Rapa
       send_request(
         browse_node_id: browse_node_id,
         domain: domain,
-        query_class: ::Rapa::Queries::LookupInBrowseNode,
-        response_class: ::Rapa::Responses::LookupInBrowseNodeResponse,
+        query_class: ::Rapa::Queries::LookupBrowseNode,
+        response_class: ::Rapa::Responses::LookupBrowseNodeResponse,
         response_groups: response_groups
       )
     end

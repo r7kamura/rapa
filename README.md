@@ -123,10 +123,7 @@ Available methods:
 - `#error`
 - `#has_error?`
 - `#has_valid_request?`
-- `#new_releases`
-- `#most_gifted`
-- `#most_wished_for`
-- `#top_sellers`
+- `#response_group(group)`
 
 ### Rapa::Responses::SearchItemsResponse
 

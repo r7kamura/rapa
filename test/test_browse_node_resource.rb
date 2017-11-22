@@ -1,4 +1,3 @@
-
 require "petitest/autorun"
 require "petitest/power_assert"
 require "petitest/spec"

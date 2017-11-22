@@ -1,6 +1,6 @@
 module Rapa
   module Responses
-    class ListItemsResponse < BaseResponse
+    class ListItemsResponse < MultipleResourcesResponse
       # @return [Rapa::Error]
       def error
         if value = body.dig("ItemLookupErrorResponse", "Error")
